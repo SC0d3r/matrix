@@ -1,15 +1,8 @@
 const additionValidity = require('./validityCheck/additionValidity');
-const { flattenOneLevel , isSemi2D } = require('./utils');
+const { flattenOneLevel , isSemi2D  , isArray} = require('./utils');
+const messages = require('./validityCheck/messages.json');
 
-const isArray = Array.isArray;
-
-const message = `
- These matrices are not valid for addition 
-
- [Help] you can use invalidityReasoner to find out the problem
-
- --> example : console.log(invalidityReasoner(matrix));
-`;
+const message = messages.default;
 
 module.exports = function add(m1, m2) {
   if (!additionValidity(m1, m2))
