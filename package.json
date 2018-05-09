@@ -1,0 +1,20 @@
+{
+  "name": "s-matrix",
+  "version": "1.0.0",
+  "description": "A Simple Matrix library",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "keywords": [
+    "math",
+    "matrix",
+    "utility",
+    "util"
+  ],
+  "author": "SC0d3r",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^3.1.0"
+  }
+}
