@@ -1,5 +1,5 @@
 const additionValidity = require('./validityCheck/additionValidity');
-const { isArray} = require('./utils');
+const { isArray , rows , columns} = require('./utils');
 const messages = require('./validityCheck/messages.json');
 
 const message = messages.default;
@@ -15,9 +15,9 @@ module.exports = function add(m1, m2) {
 
 function twoDimSum(m1, m2) {
   const res = [];
-  const cols = m1[0].length;
-  const rows = m1.length;
-  for (let i = 0; i < rows; i++) {
+  const cols = columns(m1);
+  const _rows = rows(m1);
+  for (let i = 0; i < _rows; i++) {
     res[i] = [];
     for (let j = 0; j < cols; j++) {
       res[i][j] = m1[i][j] + m2[i][j];
@@ -26,9 +26,9 @@ function twoDimSum(m1, m2) {
   return res;
 }
 function oneDimSum(m1, m2) {
-  const rows = m1.length;
+  const cols = columns(m1);
   const res = [];
-  for (let i = 0; i < rows; i++) {
+  for (let i = 0; i < cols; i++) {
     res[i] = m1[i] + m2[i];
   }
   return res;
