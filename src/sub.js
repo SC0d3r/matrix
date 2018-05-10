@@ -1,5 +1,5 @@
 const additionValidity = require('./validityCheck/additionValidity');
-const { flattenOneLevel , isSemi2D ,isArray} = require('./utils');
+const {isArray} = require('./utils');
 const messages = require('./validityCheck/messages.json');
 
 const message = messages.default;
@@ -8,8 +8,6 @@ module.exports = function sub(m1, m2) {
   if (!additionValidity(m1, m2))
     throw new Error(message);
 
-  if (isSemi2D(m1)) m1 = flattenOneLevel(m1);
-  if (isSemi2D(m2)) m2 = flattenOneLevel(m2);
 
   const isTwoDim = isArray(m1[0]) || isArray(m2[0]);
 

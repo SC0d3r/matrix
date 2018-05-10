@@ -6,6 +6,10 @@ describe("Add function" , function(){
     m1 = [1];
     m2 = [1,2];
     expect(function(){add(m1 , m2)}).toThrow();
+
+    m1 = [[1] , [1]];
+    m2 = [12,2];
+    expect(function(){add(m1 , m2)}).toThrow();
   });
   it('takes two matrices and add them togather' , function(){
     m1 = [1 , 1];
@@ -17,10 +21,4 @@ describe("Add function" , function(){
     expect(add(m1 , m2)).toEqual([[2 , 3] , [5 , 7]]);
 
   });
-  
-  it('should flatten one column matrices' , function(){
-    m1 = [[1] , [1]];
-    m2 = [12,2];
-    expect(add(m1 , m2)).toEqual([13 , 3]);
-  })
 });

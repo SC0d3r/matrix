@@ -10,14 +10,14 @@ describe('additionValidity function' , function(){
     m1 = [[1,5] , [12,2]];
     m2 = [1 , 2];
     expect(additionValidity(m1 , m2)).toEqual(false);
+    
+    m1 = [[1] , [12]];
+    m2 = [1 , 2];
+    expect(additionValidity(m1 , m2)).toEqual(false);
   });
 
   it('should return true if two matrices are valid for addition' , function(){
     m1 = [1 , 12];
-    m2 = [1 , 2];
-    expect(additionValidity(m1 , m2)).toEqual(true);
-
-    m1 = [[1] , [12]];
     m2 = [1 , 2];
     expect(additionValidity(m1 , m2)).toEqual(true);
   })

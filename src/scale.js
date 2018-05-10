@@ -8,8 +8,6 @@ module.exports = function scale(m, mag = 1) {
   if (!isNumeric(mag))
     throw new Error('param passed in for scaling is not a number');
 
-  if (isSemi2D(m)) m = flattenOneLevel(m);
-
   const isTwoDim = isArray(m[0]);
 
   return isTwoDim ? twoDimScale(m, mag) : oneDimScale(m, mag);
