@@ -31,6 +31,12 @@ describe('utils functions : ', function () {
       expect(function () { row(m, 'dummy') }).toThrow();
     })
     it('should return the specified column as an array ', function () {
+      m = [1];
+      expect(row(m, 0)).toEqual([1]);
+
+      m = [[1]];
+      expect(row(m, 0)).toEqual([1]);
+
       m = [[1, 2], [3, 4]];
       expect(row(m, 1)).toEqual([3, 4]);
     })
@@ -46,6 +52,12 @@ describe('utils functions : ', function () {
       expect(function () { column(m, 'dummy') }).toThrow();
     })
     it('should return the specified column as an array ', function () {
+      m = [1];
+      expect(column(m, 0)).toEqual([1]);
+
+      m = [[1]];
+      expect(row(m, 0)).toEqual([1]);
+
       m = [[1, 2], [3, 4]];
       expect(column(m, 1)).toEqual([2, 4]);
     })
