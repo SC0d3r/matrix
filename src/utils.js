@@ -15,7 +15,8 @@ function row(validMatrix, _row) {
 
   _row = Math.abs(_row);
 
-  return validMatrix[_row];
+  const result = validMatrix[_row];
+  return isArray(result) ? result : [result];
 }
 
 // every inner array is considered a row
@@ -43,7 +44,11 @@ function column(validMatrix, col) {
   const _rows = rows(validMatrix);
   const column = [];
   for (let i = 0; i < _rows; i++) {
-    column.push(validMatrix[i][col]);
+    const innerRow = validMatrix[i];
+    if (isArray(innerRow))
+      column.push(validMatrix[i][col]);
+    else
+      column.push(validMatrix[col]);
   }
   return column;
 }
@@ -62,7 +67,7 @@ function columns(ValidMatrix) {
 
 
 module.exports = {
-  row,rows,
+  row, rows,
   column, columns,
   isANumber, isArray
 }
