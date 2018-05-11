@@ -18,7 +18,9 @@ module.exports = function random(row, col, randGen) {
   if (randGen !== undefined && !isAFunction(randGen))
     throw new Error('third argument should a function to generate random numbers');
 
-  col = col || row;
+  col = Math.abs(col || row);
+  row = Math.abs(row);
+  
   randGen = randGen || Math.random;
 
   const resultMatrix = [];
