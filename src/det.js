@@ -43,46 +43,70 @@ function complexDeterminant(m, rows, cols) {
   const _rows = rows;
   let howManyRowsInterchange = 0;
   let j = 0;
+
   outer: for (let i = 0; i < _rows; i++) {
+
     let k = i;
     let pivot = m[k][j];
+
     while (pivot === 0) {
+
       k++;
+
       if (k > _rows - 1) break outer;
+      
       pivot = m[k][j];
+
     }
+
     if (i !== k) {
+
       interchangeRows(m, i, k);
+
       howManyRowsInterchange++;
+
     }
 
     if (k > _rows - 1)
       m[i] = m[i].map(x => x / pivot);
 
     for (let u = i + 1; u < _rows; u++) {
+      
       let underPivot = m[u][j];
+
       if (underPivot === 0) continue;
 
       if (k <= _rows - 1) {
         underPivot /= pivot;
       }
+
       m[u] = m[i].map((x, z) => (m[u][z] - (x * underPivot)));
+
     }
 
     j++;
+
     if (j === cols - 1) break;
   }
+
   const d = diag(m, _rows, cols);
+
   return Math.pow(-1, howManyRowsInterchange) * d.reduce((a, b) => a * b, 1);
 
 }
 
 function diag(m, rows, cols) {
+
   let d = [];
+
   for (let i = 0; i < rows; i++) {
+
     for (let j = 0; j < rows; j++) {
+
       if (i === j) d.push(m[i][j]);
     }
+
   }
+
   return d;
 }
