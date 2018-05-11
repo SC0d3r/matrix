@@ -2,6 +2,13 @@ const isArray = Array.isArray;
 
 const isANumber = x => !isNaN(x) && typeof x === 'number';
 
+
+function interchangeRows(m, row1, row2) {
+  const temp = m[row2];
+  m[row2] = m[row1];
+  m[row1] = temp;
+}
+
 //returns the specified row
 function row(validMatrix, _row) {
   if (!isArray(validMatrix)) {
@@ -69,6 +76,8 @@ function columns(ValidMatrix) {
 module.exports = {
   row, rows,
   column, columns,
-  isANumber, isArray
+  isANumber, isArray,
+
+  interchangeRows
 }
 
