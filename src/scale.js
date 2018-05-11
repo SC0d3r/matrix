@@ -1,6 +1,6 @@
 const isValid = require('./validityCheck/isValid');
 const messages = require('./validityCheck/messages.json');
-const { flattenOneLevel, isSemi2D, isArray } = require('./utils');
+const { isArray } = require('./utils');
 
 module.exports = function scale(m, mag = 1) {
   if (!isValid(m))
@@ -13,7 +13,7 @@ module.exports = function scale(m, mag = 1) {
   return isTwoDim ? twoDimScale(m, mag) : oneDimScale(m, mag);
 
 }
-function twoDimScale(m , mag) {
+function twoDimScale(m, mag) {
   const res = [];
   const cols = m[0].length;
   const rows = m.length;
@@ -26,7 +26,7 @@ function twoDimScale(m , mag) {
   return res;
 }
 
-function oneDimScale(m , mag) {
+function oneDimScale(m, mag) {
   const rows = m.length;
   const res = [];
   for (let i = 0; i < rows; i++) {
