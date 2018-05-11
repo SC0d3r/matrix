@@ -11,3 +11,4 @@
 * `div`
 * `identity`
 * `random`
+* `stringify`
