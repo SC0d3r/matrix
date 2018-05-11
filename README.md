@@ -7,3 +7,7 @@
 * `scale`
 * `mul`
 * `transpose`
+* `det`
+* `div`
+* `identity`
+* `random`
