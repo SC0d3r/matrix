@@ -1,4 +1,6 @@
 const LU = require('../src/LU');
+const mul = require('../src/mul');
+const clone = require('../src/clone');
 
 describe('LU function', function () {
   let m;
@@ -58,4 +60,16 @@ describe('LU function', function () {
     expect(lt).toEqual(expectedLT);
 
   });
+
+  it('should obey this rule A = LU' , function(){
+    m = [
+      [3, 2, 3, 4],
+      [4, 4, 3, 2],
+      [1, 4, 4, 3],
+      [2, 3, 1, 1]
+    ];
+    [lt, ut] = LU(clone(m));
+
+    expect(mul(lt , ut)).toEqual(m);
+  })
 })
