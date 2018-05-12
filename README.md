@@ -12,3 +12,5 @@
 * `identity`
 * `random`
 * `stringify`
+* `clone`
+* `LU`
