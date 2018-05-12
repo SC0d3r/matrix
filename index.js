@@ -8,11 +8,14 @@ const random = require('./src/random');
 const scale = require('./src/scale');
 const transpose = require('./src/transpose');
 const { row, rows, column, columns } = require('./src/utils');
-const strigify = require('./src/stringify');
+const stringify = require('./src/stringify');
+const clone = require('./src/clone');
+const LU = require('./src/LU');
 
 module.exports = {
   add, sub, div,
   det, identity, mul,
-  random, scale, transpose, strigify,
-  row, rows, column, columns
+  random, scale, transpose,
+  row, rows, column, columns,
+  stringify, clone, LU
 }
