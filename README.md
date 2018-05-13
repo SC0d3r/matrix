@@ -1,4 +1,4 @@
-## `Matrix`  Library<sub><small> {small but `Efficient`}</small></sub>
+## `Matrix`  Library<sub><small> {small and `Efficient`}</small></sub>
 
 ### Methods
 
@@ -14,3 +14,6 @@
 * `stringify`
 * `clone`
 * `LU`
+* `inv`
+* `mergeR`
+* `mergeL`
