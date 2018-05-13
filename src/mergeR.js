@@ -32,7 +32,7 @@ function mergeR(lM, rM) {
   const isTwoDim = isArray(lM[0]) || isArray(rM[0]);
 
   // this ternary statement is for preserving the dimension
-  // ex :
+  // ex : A matrix with 1 row and 4 columns
   //  rm = [1,2];lm = [3,4] => merge returns => [1,2,3,4];
   //  rm = [[1,2]];lm = [[3,4]] => merge returns => [[1,2,3,4]];
 
