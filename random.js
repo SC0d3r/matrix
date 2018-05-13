@@ -1,6 +1,6 @@
-
 const isANumber = x => !isNaN(x) && typeof x === 'number';
 const isAFunction = x => typeof x === 'function';
+const _random = require('./_random');
 
 module.exports = function random(row, col, randGen) {
   if (!isANumber(row))
@@ -21,16 +21,5 @@ module.exports = function random(row, col, randGen) {
   col = Math.abs(col || row);
   row = Math.abs(row);
   
-  randGen = randGen || Math.random;
-
-  const resultMatrix = [];
-
-  for (let i = 0; i < row; i++) {
-    resultMatrix[i] = [];
-    for (let j = 0; j < col; j++) {
-      resultMatrix[i][j] = randGen(i,j);
-    }
-  }
-
-  return resultMatrix;
+  return _random(row , col , randGen);
 }

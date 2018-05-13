@@ -1,4 +1,3 @@
-const isArray = Array.isArray;
 const isValid = require('./isValid');
 const {rows , columns}  = require('./utils');
 
