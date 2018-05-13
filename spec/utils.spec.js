@@ -30,14 +30,22 @@ describe('utils functions : ', function () {
       m = [[1, 2], [3, 4]];
       expect(function () { row(m, 'dummy') }).toThrow();
     })
+    it('should throw if the requested row is bigger than matrix rows', function () {
+      m[1, 2];
+      expect(function () { row(m, 3) }).toThrow();
+    })
     it('should return the specified column as an array ', function () {
       m = [1];
       expect(row(m, 0)).toEqual([1]);
+
+      m = [1, 3];
+      expect(row(m, 0)).toEqual([1, 3]);
 
       m = [[1]];
       expect(row(m, 0)).toEqual([1]);
 
       m = [[1, 2], [3, 4]];
+      expect(row(m, 0)).toEqual([1, 2]);
       expect(row(m, 1)).toEqual([3, 4]);
     })
 
@@ -51,9 +59,16 @@ describe('utils functions : ', function () {
       m = [[1, 2], [3, 4]];
       expect(function () { column(m, 'dummy') }).toThrow();
     })
+    it('should throw if the requested column is bigger than matrix columns', function () {
+      m = [1, 2];
+      expect(function () { column(m, 3) }).toThrow();
+    })
     it('should return the specified column as an array ', function () {
       m = [1];
       expect(column(m, 0)).toEqual([1]);
+
+      m = [1, 2];
+      expect(column(m, 1)).toEqual([2]);
 
       m = [[1]];
       expect(row(m, 0)).toEqual([1]);
