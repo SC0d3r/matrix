@@ -1,4 +1,4 @@
-const identity = require('../src/identity');
+const identity = require('../identity');
 
 describe('identity function', function () {
   it('should throw if the first argument is not provided', function () {

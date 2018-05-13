@@ -1,4 +1,4 @@
-const det = require('../src/det');
+const det = require('../det');
 
 describe('det function', function () {
   let m;

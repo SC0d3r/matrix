@@ -1,4 +1,4 @@
-const div = require('../src/div');
+const div = require('../div');
 
 describe('div function',function(){
   let m1,m2;

@@ -1,4 +1,4 @@
-const additionValidity = require('../../src/validityCheck/additionValidity');
+const additionValidity = require('../additionValidity');
 
 describe('additionValidity function' , function(){
   let m1,m2;

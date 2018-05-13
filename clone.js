@@ -1,5 +1,5 @@
-const isValid = require('./validityCheck/isValid');
-const messages = require('./validityCheck/messages.json');
+const isValid = require('./isValid');
+const messages = require('./messages.json');
 const { rows, columns, isArray } = require('./utils');
 
 module.exports = function clone(m) {

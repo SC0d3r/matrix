@@ -1,4 +1,4 @@
-const invalidityReasoner = require("../../src/validityCheck/invalidityReasoner");
+const invalidityReasoner = require("../invalidityReasoner");
 
 describe('invalidityReasoner function' , function(){
   let mat;

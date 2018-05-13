@@ -1,4 +1,4 @@
-const isValid = require('./validityCheck/isValid');
+const isValid = require('./isValid');
 const { isArray, columns, rows } = require('./utils');
 
 const fixed = x => num => num.toFixed(x);

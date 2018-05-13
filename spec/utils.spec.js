@@ -1,4 +1,4 @@
-const { row, rows, columns, column } = require('../src/utils');
+const { row, rows, columns, column } = require('../utils');
 
 describe('utils functions : ', function () {
   describe('rows function', function () {

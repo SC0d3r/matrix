@@ -1,6 +1,6 @@
-const additionValidity = require('./validityCheck/additionValidity');
+const additionValidity = require('./additionValidity');
+const messages = require('./messages.json');
 const {isArray} = require('./utils');
-const messages = require('./validityCheck/messages.json');
 
 const message = messages.default;
 

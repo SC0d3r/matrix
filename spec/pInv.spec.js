@@ -1,7 +1,7 @@
-const pInv = require('../src/pInv');
-const mul = require('../src/mul');
-const clone = require('../src/clone');
-const identity = require('../src/identity');
+const pInv = require('../pInv');
+const mul = require('../mul');
+const clone = require('../clone');
+const identity = require('../identity');
 
 describe('pInv function', function () {
   let m;

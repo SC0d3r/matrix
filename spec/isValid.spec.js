@@ -1,4 +1,4 @@
-const valid = require("../../src/validityCheck/isValid");
+const valid = require("../isValid");
 
 describe('valid function' , function(){
   let mat;

@@ -1,6 +1,6 @@
 const isArray = Array.isArray;
 const isValid = require('./isValid');
-const {rows , columns}  = require('../utils');
+const {rows , columns}  = require('./utils');
 
 module.exports = function additionValidity(m1, m2) {
   const areBothValid = isValid(m1) && isValid(m2);

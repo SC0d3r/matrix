@@ -1,4 +1,4 @@
-const scale = require('../src/scale');
+const scale = require('../scale');
 
 describe('scale function' , function(){
   let m;

@@ -1,4 +1,4 @@
-const add  = require('../src/add');
+const add  = require('../add');
 
 describe("Add function" , function(){
   let m1,m2;

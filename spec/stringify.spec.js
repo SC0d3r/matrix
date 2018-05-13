@@ -1,4 +1,4 @@
-const stringify = require('../src/stringify');
+const stringify = require('../stringify');
 
 describe('stringify functin', function () {
   it('should throw if the martix is not a valid one', function () {

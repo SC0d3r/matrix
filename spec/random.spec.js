@@ -1,4 +1,4 @@
-const random = require('../src/random');
+const random = require('../random');
 
 describe('random function',function(){
   it('should throw if the first argument is not a number' , function(){

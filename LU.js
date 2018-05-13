@@ -1,5 +1,5 @@
-const isValid = require('./validityCheck/isValid');
-const messages = require('./validityCheck/messages.json');
+const isValid = require('./isValid');
+const messages = require('./messages.json');
 const { isArray, column, columns, row, rows, interchangeRows } = require('./utils');
 const identity = require('./identity');
 

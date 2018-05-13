@@ -1,4 +1,4 @@
-const sub = require('../src/sub');
+const sub = require('../sub');
 
 describe('sub function' , function(){
   let m1,m2;

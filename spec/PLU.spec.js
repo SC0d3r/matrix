@@ -1,5 +1,5 @@
-const PLU = require('../src/PLU');
-const mul = require('../src/mul');
+const PLU = require('../PLU');
+const mul = require('../mul');
 
 describe('PLU function', function () {
   let m;

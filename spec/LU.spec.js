@@ -1,6 +1,6 @@
-const LU = require('../src/LU');
-const mul = require('../src/mul');
-const clone = require('../src/clone');
+const LU = require('../LU');
+const mul = require('../mul');
+const clone = require('../clone');
 
 describe('LU function', function () {
   let m;

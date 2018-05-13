@@ -1,6 +1,6 @@
-const isValid = require('./validityCheck/isValid');
-const additionValidity = require('./validityCheck/additionValidity');
-const messages = require('./validityCheck/messages.json');
+const isValid = require('./isValid');
+const additionValidity = require('./additionValidity');
+const messages = require('./messages.json');
 const { isArray, columns, rows } = require('./utils');
 module.exports = function div(m1, m2) {
   if (

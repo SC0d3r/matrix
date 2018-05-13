@@ -1,16 +1,16 @@
-const add = require('./src/add');
-const sub = require('./src/sub');
-const div = require('./src/div');
-const det = require('./src/det');
-const identity = require('./src/identity');
-const mul = require('./src/mul');
-const random = require('./src/random');
-const scale = require('./src/scale');
-const transpose = require('./src/transpose');
-const { row, rows, column, columns } = require('./src/utils');
-const stringify = require('./src/stringify');
-const clone = require('./src/clone');
-const LU = require('./src/LU');
+const add = require('./add');
+const sub = require('./sub');
+const div = require('./div');
+const det = require('./det');
+const identity = require('./identity');
+const mul = require('./mul');
+const random = require('./random');
+const scale = require('./scale');
+const transpose = require('./transpose');
+const { row, rows, column, columns } = require('./utils');
+const stringify = require('./stringify');
+const clone = require('./clone');
+const LU = require('./LU');
 
 module.exports = {
   add, sub, div,

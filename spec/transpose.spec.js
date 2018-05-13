@@ -1,4 +1,4 @@
-const transpose = require('../src/transpose');
+const transpose = require('../transpose');
 
 describe('transpose function', function () {
   let m;

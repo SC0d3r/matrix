@@ -1,4 +1,4 @@
-const mergeL = require('../src/mergeL');
+const mergeL = require('../mergeL');
 
 describe('mergeL function ', function () {
   let m1, m2;

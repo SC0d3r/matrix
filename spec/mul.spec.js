@@ -1,4 +1,4 @@
-const mul = require('../src/mul');
+const mul = require('../mul');
 
 describe('mul function', function () {
   let m1, m2;

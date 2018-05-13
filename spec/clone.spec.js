@@ -1,4 +1,4 @@
-const clone = require('../src/clone');
+const clone = require('../clone');
 
 describe('clone function', function () {
   let m;

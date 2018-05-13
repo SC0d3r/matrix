@@ -1,4 +1,4 @@
-const pDet = require('../src/pDet');
+const pDet = require('../pDet');
 
 describe('pDet function', function () {
   let m;
