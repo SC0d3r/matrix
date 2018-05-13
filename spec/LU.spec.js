@@ -9,7 +9,7 @@ describe('LU function', function () {
 
   it('should throw if the given matrix is not valid', function () {
     m = [1, [2]];
-    expect(function () { UT(m) }).toThrow();
+    expect(function () { LU(m) }).toThrow();
   })
   it('should return Lower triangular and Upper triangular of the given matrix', function () {
     m = [
