@@ -31,7 +31,7 @@ describe('utils functions : ', function () {
       expect(function () { row(m, 'dummy') }).toThrow();
     })
     it('should throw if the requested row is bigger than matrix rows', function () {
-      m[1, 2];
+      m = [1, 2];
       expect(function () { row(m, 3) }).toThrow();
     })
     it('should return the specified column as an array ', function () {
