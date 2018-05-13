@@ -34,31 +34,20 @@ module.exports = function inv(m) {
     throw new Error('det(Matrix) = 0 , so this matrix is not invertable');
 
 
-
   const [lt, ut] = LU(m);
   
-  // console.log('\n *** ::: *** \n');
-  // console.log(lt);
-  // console.log('\n\n');
-  // console.log(ut);
-  // console.log('\n *** ^^^ *** \n');
   
   const In = identity(_rows);
+
   const ut_In = mergeR(ut, In);
   const lt_In = mergeR(lt , In);
   
   const inv_lt_In = inverseLT_In(lt_In, _rows);
-  
   const inv_ut_In = inverseUT_In(ut_In, _rows);
   
   const inv_lt = extractInv(inv_lt_In , _rows);
   const inv_ut = extractInv(inv_ut_In , _rows);
   
-  // console.log('\n *** ::INV:: *** \n');
-  // console.log(inv_lt);
-  // console.log('\n\n');
-  // console.log(inv_ut);
-  // console.log('\n *** ^^^ *** \n');
 
   return mul(inv_ut , inv_lt);
 }
@@ -73,7 +62,6 @@ function extractInv(In_Inv , rows){
   }
   return inv;
 }
-
 
 function inverseLT_In(UT_In, rows) {
   let j = 0;
@@ -108,11 +96,6 @@ function inverseLT_In(UT_In, rows) {
   }
   return UT_In;
 }
-
-
-
-
-
 
 function inverseUT_In(UT_In, rows) {
   let j = rows - 1;
