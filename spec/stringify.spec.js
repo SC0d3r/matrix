@@ -32,7 +32,7 @@ describe('stringify functin', function () {
     expect(strRepr).toContain('.');
     
     m1 = [[1,2,3],[4,5,6]];
-    strRepr = stringify(m1);
+    strRepr = stringify(m1,4);
     
     m1 = [[1,2,3,4],[4,5,6,2]];
     strRepr = stringify(m1);
