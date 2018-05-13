@@ -21,8 +21,20 @@ function row(validMatrix, _row) {
     throw new Error('Second Argument must be a number');
 
   _row = Math.abs(_row);
+  const matrix_rows = rows(validMatrix);
 
-  const result = validMatrix[_row];
+  if(_row >= matrix_rows){
+    throw new Error('This matrix has only '+matrix_rows+' rows but requested row is '+_row);
+  }
+  
+  const isTwoDim = isArray(validMatrix[0]);
+
+  let result;
+  if (isTwoDim)
+    result = validMatrix[_row];
+  else
+    result = validMatrix;
+
   return isArray(result) ? result : [result];
 }
 
@@ -47,6 +59,11 @@ function column(validMatrix, col) {
     throw new Error('Argument must be a number');
 
   col = Math.abs(col);
+  const matrix_cols = columns(validMatrix);
+
+  if(col >= matrix_cols){
+    throw new Error('This matrix has only '+matrix_cols+' columns but requested column is '+col);
+  }
 
   const _rows = rows(validMatrix);
   const column = [];
