@@ -1,7 +1,7 @@
 {
-  "name": "s-matrix",
+  "name": "matrix-core",
   "version": "1.0.0",
-  "description": "A Simple Matrix library",
+  "description": "A Small and Efficient Matrix library",
   "main": "index.js",
   "scripts": {
     "test": "jasmine",
@@ -12,6 +12,13 @@
     "math",
     "matrix",
     "utility",
+    "linear",
+    "array",
+    "algebra",
+    "data",
+    "structure",
+    "mathematics",
+    "matrices",
     "util"
   ],
   "author": "SC0d3r",
