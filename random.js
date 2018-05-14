@@ -2,15 +2,15 @@ const isANumber = x => !isNaN(x) && typeof x === 'number';
 const isAFunction = x => typeof x === 'function';
 const _random = require('./_random');
 
-module.exports = function random(row, col, randGen) {
-  if (!isANumber(row))
+module.exports = function random(rows, cols, randGen) {
+  if (!isANumber(rows))
     throw new Error('first argument should be a number');
 
-  if (col !== undefined) {
-    if (isAFunction(col)) {
-      randGen = col;
-      col = row;
-    } else if (!isANumber(col))
+  if (cols !== undefined) {
+    if (isAFunction(cols)) {
+      randGen = cols;
+      cols = rows;
+    } else if (!isANumber(cols))
       throw new Error('second argument should be a number of columns');
   }
 
@@ -18,8 +18,8 @@ module.exports = function random(row, col, randGen) {
   if (randGen !== undefined && !isAFunction(randGen))
     throw new Error('third argument should a function to generate random numbers');
 
-  col = Math.abs(col || row);
-  row = Math.abs(row);
+  cols = Math.abs(cols || rows);
+  rows = Math.abs(rows);
   
-  return _random(row , col , randGen);
+  return _random(rows , cols , randGen);
 }
