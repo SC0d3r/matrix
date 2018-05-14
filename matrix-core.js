@@ -52,6 +52,9 @@ const _inv = require('./_inv');
 const pInv = require('./pInv');
 const _pInv = require('./_pInv');
 
+const ones = require('./ones');
+const _ones = require('./_ones');
+
 const { row, rows, column, columns } = require('./utils');
 
 const invalidityReasoner = require('./invalidityReasoner');
@@ -65,6 +68,7 @@ const Matrix = {
   stringify, clone, LU, PLU,
   mergeR, mergeL,
   inv, pInv,
+  ones,_ones,
   
   _add, _sub, _div,
   _det, _pDet, _identity, _mul,
