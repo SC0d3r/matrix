@@ -4,8 +4,9 @@
   "description": "A Small and Efficient Matrix library",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine",
-    "coverage": "./node_modules/.bin/istanbul.cmd cover ./node_modules/jasmine/bin/jasmine.js",
+    "test": "istanbul cover jasmine --captureExceptions  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "test:dev": "jasmine",
+    "coverage" : "./node_modules/.bin/istanbul.cmd cover ./node_modules/jasmine/bin/jasmine.js",
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
   },
@@ -25,6 +26,7 @@
   "author": "SC0d3r",
   "license": "MIT",
   "devDependencies": {
+    "coveralls": "^3.0.1",
     "istanbul": "^0.4.5",
     "jasmine": "^3.1.0",
     "webpack": "^4.8.3",
