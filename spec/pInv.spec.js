@@ -14,9 +14,9 @@ describe('pInv function', function () {
     expect(function () { pInv(m) }).toThrow();
   })
 
-  it('should throw if the det(matrix) is equal to zero', function () {
+  it('should return 0 if the det(matrix) is equal to zero', function () {
     m = [[1, 4], [1, 4]];
-    expect(function () { pInv(m) }).toThrow();
+    expect(pInv(m)).toEqual(0);
   })
 
   it('should return the inverse of the given matrix ', function () {

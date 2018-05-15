@@ -27,7 +27,7 @@ module.exports = function _inv(m) {
     determinant = det(m);
 
   if (determinant === 0)
-    throw new Error('det(Matrix) = 0 , so this matrix is not invertable');
+    return 0;
 
 
   const [lt, ut] = LU(m);
