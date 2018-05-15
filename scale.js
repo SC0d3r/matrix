@@ -1,12 +1,12 @@
 const isValid = require('./isValid');
-const messages = require('./messages.json');
+const {common} = require('./messages');
 const { isArray } = require('./utils');
 
 const _scale = require('./_scale');
 
 module.exports = function scale(m, mag = 1) {
   if (!isValid(m))
-    throw new Error(messages.default);
+    throw new Error(common);
   if (!isNumeric(mag))
     throw new Error('scale(matrix , --> Here should be a number <--)');
 

@@ -1,5 +1,5 @@
 const isValid = require('./isValid');
-const messages = require('./messages.json');
+const {common} = require('./messages');
 const _mergeR = require('./_mergeR');
 
 module.exports = function mergeR(lM, rM) {
@@ -7,7 +7,7 @@ module.exports = function mergeR(lM, rM) {
     !isValid(lM) ||
     !isValid(rM)
   )
-    throw new Error(messages.default);
+    throw new Error(common);
 
   return _mergeR(lM, rM);
 }

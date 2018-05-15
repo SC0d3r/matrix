@@ -1,6 +1,6 @@
 const isValid = require('./isValid');
 const additionValidity = require('./additionValidity');
-const messages = require('./messages.json');
+const {common} = require('./messages');
 const _div = require('./_div');
 
 module.exports = function div(m1, m2) {
@@ -9,7 +9,7 @@ module.exports = function div(m1, m2) {
     !isValid(m2) ||
     !additionValidity(m1, m2)
   )
-    throw new Error(messages.default);
+    throw new Error(common);
 
   return _div(m1 , m2);
 }

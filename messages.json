@@ -1,3 +1,0 @@
-{
-  "default" :"\nThese matrices are not valid for addition\n[Help] you can use invalidityReasoner to find out the problem\n--> example : console.log(invalidityReasoner(matrix));"
-}

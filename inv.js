@@ -1,11 +1,11 @@
 const isValid = require('./isValid');
-const messages = require('./messages.json');
+const {common} = require('./messages');
 
 const _inv = require('./_inv');
 
 module.exports = function inv(m) {
   if (!isValid(m))
-    throw new Error(messages.default);
+    throw new Error(common);
   
   return _inv(m);
 } 

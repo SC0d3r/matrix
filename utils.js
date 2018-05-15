@@ -12,13 +12,13 @@ function interchangeRows(m, row1, row2) {
 //returns the specified row
 function row(validMatrix, _row) {
   if (!isArray(validMatrix)) {
-    throw new Error('first arg should be a valid matrix');
+    throw new Error('row(--> Here should be a valid matrix <-- , row_number)');
   }
   if (_row === undefined)
-    throw new Error('you must provide a second argument(which row)');
+    throw new Error('row(validMatrix , --> Here should be the row number to fetch <--)');
 
   if (!isANumber(_row))
-    throw new Error('Second Argument must be a number');
+    throw new Error('row(validMatrix , --> Here should be the row number to fetch <--)');
 
   _row = Math.abs(_row);
   const matrix_rows = rows(validMatrix);
@@ -51,12 +51,12 @@ function rows(ValidMatrix) {
 // returns the specified column
 function column(validMatrix, col) {
   if (!isArray(validMatrix)) {
-    throw new Error('first arg should be a valid matrix');
+    throw new Error('column(--> Here should be a valid matrix <-- , column_number)');
   }
   if (col === undefined)
-    throw new Error('you must provide a second argument(which column)');
+    throw new Error('column(validMatrix , --> Here should be the column number to fetch <--)');
   if (!isANumber(col))
-    throw new Error('Argument must be a number');
+    throw new Error('column(validMatrix , --> Here should be the column number to fetch <--)');
 
   col = Math.abs(col);
   const matrix_cols = columns(validMatrix);

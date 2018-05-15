@@ -5,7 +5,7 @@ const isZero = x => x === 0;
 
 module.exports = function ones(rows, cols) {
   if (rows === undefined)
-    throw new Error('ones(--> Here should be a number <-- , cols)');
+    throw new Error('ones(--> Here should be a number But its undefined <-- , cols)');
 
   if (!isANumber(rows))
     throw new Error('ones(--> Here should be a number <-- , cols)');

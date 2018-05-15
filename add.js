@@ -1,12 +1,11 @@
 const _add = require('./_add');
 const additionValidity = require('./additionValidity');
-const messages = require('./messages.json');
+const {common} = require('./messages');
 
-const message = messages.default;
 
 module.exports = function add(m1 , m2){
   if (!additionValidity(m1, m2))
-    throw new Error(message);
+    throw new Error(common);
 
   return _add(m1 , m2);
 }
