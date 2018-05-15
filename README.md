@@ -13,8 +13,17 @@ Matrix-core is a small library for handling matrices , At its core it is made on
 ### In browser
 Then add a `<script>` to your index.html:
 
-```javascript
+```html
 <script src="/node_modules/matrix-core/dist/matrix-core.min.js"></script>
+
+<!-- now you have access to Matrix obj -->
+
+<!-- Example -->
+<script>
+
+ Matrix.add([1,2],[3,4]); // [4,6]
+ 
+</script>
 ```
 
 ### In Node
