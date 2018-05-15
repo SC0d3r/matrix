@@ -11,7 +11,7 @@ module.exports = function random(rows, cols, randGen) {
       randGen = cols;
       cols = rows;
     } else if (!isANumber(cols))
-      throw new Error('random(rows , --> Here should be the number of cols <--)');
+      throw new Error('random(rows , --> Here should be the number of cols Or random number generator function <--)');
   }
 
 
