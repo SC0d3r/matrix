@@ -1,12 +1,16 @@
 {
   "name": "matrix-core",
-  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SC0d3r/matrix"
+  },
+  "version": "1.0.1",
   "description": "A Small and Efficient Matrix library",
   "main": "index.js",
   "scripts": {
     "test": "istanbul cover jasmine --captureExceptions  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "test:dev": "jasmine",
-    "coverage" : "./node_modules/.bin/istanbul.cmd cover ./node_modules/jasmine/bin/jasmine.js",
+    "coverage": "./node_modules/.bin/istanbul.cmd cover ./node_modules/jasmine/bin/jasmine.js",
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
   },
@@ -23,7 +27,10 @@
     "matrices",
     "util"
   ],
-  "author": "SC0d3r",
+  "author": {
+    "name": "SC0d3r",
+    "url": "http://sasan-kelishani.ir"
+  },
   "license": "MIT",
   "devDependencies": {
     "coveralls": "^3.0.1",
