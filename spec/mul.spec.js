@@ -5,7 +5,7 @@ describe('mul function', function () {
   it('should throw if matrices are not valid', function () {
     m1 = [1, [2]];
     m2 = [1, 2];
-    expect(function () { mul(m, 2) }).toThrow();
+    expect(function () { mul(m1, 2) }).toThrow();
   });
 
   it('should throw if matrices dont have valid dim to get multiplied', function () {
