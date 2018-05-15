@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/SC0d3r/matrix"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Small and Efficient Matrix library",
   "main": "index.js",
   "scripts": {
