@@ -21,7 +21,7 @@ describe('LU function', function () {
       [3, 1],
       [0, 0.6666666666666667]
     ];
-    
+
     expectedLT = [
       [1, 0],
       [1.3333333333333333, 1]
@@ -59,9 +59,33 @@ describe('LU function', function () {
     expect(ut).toEqual(expectedUT);
     expect(lt).toEqual(expectedLT);
 
+
+    m = [
+      [2, 3, 4],
+      [0, 1, 5],
+      [6, 5, 4]
+    ];
+
+    expectedUT = [
+      [2, 3, 4],
+      [0, 1, 5],
+      [0, 0, 12]
+    ];
+
+    expectedLT = [
+      [1, 0, 0],
+      [0, 1, 0],
+      [3, -4, 1]
+    ];
+
+    [lt, ut] = LU(m);
+
+    expect(ut).toEqual(expectedUT);
+    expect(lt).toEqual(expectedLT);
+
   });
 
-  it('should obey this rule A = LU' , function(){
+  it('should obey this rule A = LU', function () {
     m = [
       [3, 2, 3, 4],
       [4, 4, 3, 2],
@@ -70,6 +94,6 @@ describe('LU function', function () {
     ];
     [lt, ut] = LU(clone(m));
 
-    expect(mul(lt , ut)).toEqual(m);
+    expect(mul(lt, ut)).toEqual(m);
   })
 })
