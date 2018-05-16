@@ -83,8 +83,96 @@ describe('LU function', function () {
     expect(ut).toEqual(expectedUT);
     expect(lt).toEqual(expectedLT);
 
-  });
 
+    m = [
+      [2, 3, 4],
+      [1, 0, 5],
+      [6, 5, 4]
+    ];
+
+    expectedUT = [
+      [2, 3, 4],
+      [0, -1.5, 3],
+      [0, 0, -16]
+    ];
+
+    expectedLT = [
+      [1, 0, 0],
+      [0.5, 1, 0],
+      [3, 2.6666666666666665, 1]
+    ];
+
+    [lt, ut] = LU(m);
+
+    expect(ut).toEqual(expectedUT);
+    expect(lt).toEqual(expectedLT);
+
+
+    m = [
+      [2, 3, 4],
+      [1, 0, 0],
+      [0, 0, 4]
+    ];
+
+    expectedUT = [
+      [2, 3, 4],
+      [0, -1.5, -2],
+      [0, 0, 4]
+    ];
+
+    expectedLT = [
+      [1, 0, 0],
+      [0.5, 1, 0],
+      [0, 0, 1]
+    ];
+
+    [lt, ut] = LU(m);
+
+    expect(ut).toEqual(expectedUT);
+    expect(lt).toEqual(expectedLT);
+
+
+    m = [
+      [0, 3, 4],
+      [1, 0, 0],
+      [0, 0, 4]
+    ];
+
+    expectedUT = [
+      [0, 3, 4],
+      [1, -3, -4],
+      [0, 0, 4]
+    ];
+
+    expectedLT = [
+      [1, 0, 0],
+      [1, 1, 0],
+      [0, 0, 1]
+    ];
+
+    [lt, ut] = LU(clone(m));
+
+    expect(ut).toEqual(expectedUT);
+    expect(lt).toEqual(expectedLT);
+
+    expect(mul(lt, ut)).toEqual(m);
+
+  });
+  it('should return 0 if the matrix has no LU representation', function () {
+
+    m = [
+      [0, 3, 4],
+      [0, 0, 0],
+      [0, 0, 4]
+    ];
+
+
+    [lt, ut] = LU(m);
+
+    expect(ut).toEqual(0);
+    expect(lt).toEqual(0);
+
+  })
   it('should obey this rule A = LU', function () {
     m = [
       [3, 2, 3, 4],
