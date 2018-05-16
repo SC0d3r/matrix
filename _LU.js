@@ -17,9 +17,6 @@ module.exports = function _LU(m) {
       if (k > _rows - 1) return m;
       pivot = m[k][j];
     }
-    if (i !== k) {
-      interchangeRows(m, i, k);
-    }
 
     if (k > _rows - 1)
       m[i] = m[i].map(x => x / pivot);
