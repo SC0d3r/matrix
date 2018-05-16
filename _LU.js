@@ -14,12 +14,16 @@ module.exports = function _LU(m) {
     let pivot = m[k][j];
     while (pivot === 0) {
       k++;
-      if (k > _rows - 1) return m;
+      if (k >= _rows) return [0,0]; // means no LU transformation
       pivot = m[k][j];
     }
 
-    if (k > _rows - 1)
-      m[i] = m[i].map(x => x / pivot);
+    // if (i !== k) {
+    //   interchangeRows(m, i, k);
+    // }
+
+    // if (k > _rows - 1)
+    //   m[i] = m[i].map(x => x / pivot);
 
     for (let u = i + 1; u < _rows; u++) {
       let underPivot = m[u][j];
