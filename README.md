@@ -275,6 +275,9 @@ const result = clone(m); // [[1, 2], [3, 4]]
 ```
 
 ### LU
+It returns the `Lower` and `Upper` triangular of matrix.
+
+
 [<small>Not `pure`</small>]
 
 ```javascript
@@ -298,6 +301,9 @@ const matrix = [
    [0, 0.6666666666666667]
  ];
 
+
+ Note : if matrix has no LU form it returns
+        lt = 0 , ut = 0
 */
 ```
 
@@ -307,14 +313,17 @@ const matrix = [
 ```javascript
 const {inv} = require('matrix-core');
 
-// it throws if the given matrix does not have an inverse
+const matrix = [[1, 2], [3, 4]];
 
-const matrix = [[1, 4], [1, 4]]; // determinant = 0 --> so does not have an inverse
+let inv_m = inv(matrix); // [[-2, 1], [1.5, -0.5]];
+ 
 
-const result = inv(matrix); // result = 0; means there is no inverse
 
-const matrix1 = [[1, 2], [3, 4]];
-let inv_m = inv(matrix1); // [[-2, 1], [1.5, -0.5]];
+const matrix1 = [[1, 4], [1, 4]]; // determinant = 0 --> so does not have an inverse
+
+const result = inv(matrix1); // result = 0; means there is no inverse
+
+
 
 ```
 
